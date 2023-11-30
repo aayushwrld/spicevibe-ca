@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <title>Spice Vibe</title>
+</head>
+
+<body>
+
+    <video autoplay muted loop id="home" poster="./assets/background-img.png">
+        <source src="./assets/background-vid.mp4" type="video/mp4">
+    </video>
+    <div class="parent">
+        <nav>
+            <div class="navbar">
+                <span id="nav-head"><a id="home-btn">Home</a></span>
+                <span id="nav-head"><a id="explore-btn">Explore</a></span>
+                <span id="nav-head"><a href="./about.html">About</a></span>
+            </div>
+        </nav>
+        <div class="blur">
+
+            <div class="main">
+                <div class="heading">
+                    <span id="logo">Spice Vibe</span>
+                    <span id="byline">A symphony of Flavours</span>
+                </div>
+                <div class="middle">
+                    <span id="button-line">Ready to find a Meal?</span>
+                </div>
+                <div class="buttons">
+                    <button id="search-meal" onclick="location.href='#meal-search-info'">Spice In!</button>
+                    <button id="meal-of-day" onclick="location.href='#meals'">Explore a Meal</button>
+                </div>
+            </div>
+            <div id="meals">
+                <div class="meal-gen-random">
+                    <div class="meal-gen-header">
+                        <span id="meal-gen-header-1">Make yourself this delicious meal!</span>
+                        <span id="meal-gen-header-2">Here's a Recipe for you!</span>
+                        <span id="meal-gen-header-info">Click on the meal to generate its recipe!</span>
+                    </div>
+                    <div class="meal-gen-food">
+                        <div class="meal-gen-food-border">
+                            <div class="meal-loading" id="meal-loading"><img src="./assets/loading.gif" alt=""></div>
+                            <div class="meal-gen-food-img">
+                                <img src="" alt="" id="meal-random-img">
+                            </div>
+                            <div class="meal-gen-food-dish">
+                                <span id="meal-gen-food-name"></span>
+                            </div>
+                        </div>
+                        <div class="meal-gen-button"><button id="gen-meal"><img src="./assets/redo-icon.png" alt=""
+                                    id="redo-icon">Generate New</button></div>
+                    </div>
+                </div>
+
+                <div class="meal-gen-category">
+                    <div class="meal-search-area">
+                        <span id="meal-search-info">Search for your desired category!</span>
+                        <div class="meal-search-button">
+                            <input type="text" id="search-input" placeholder="Search for Category" />
+                            <button id="search-btn"><img src="./assets/search-icon.png" alt=""
+                                    id="search-icon"></button>
+                        </div>
+                        <span id="meal-search-info2">Search to get results!</span>
+                    </div>
+                    <center><span id="meal-search-info3"></span>
+                        <center>
+
+
+                            <div class="meal-results-area">
+
+                            </div>
+                </div>
+            </div>
+            <div class="cat-image">
+                <img src="./assets/cat-cooking.gif" alt="" id="cat-cook">
+            </div>
+        </div>
+
+
+        <div id="modal">
+            <div class="modal-inner">
+                <div class="modal-close-btn">
+                    <button id="modal-close"><img src="./assets/close-icon.png" alt="" id="close-icon">Close</button>
+                </div>
+                <div class="modal-content">
+                    <div class="meal-loading for-search" id="meal-loading"><img src="./assets/loading.gif" alt=""></div>
+                    <div class="modal-content-left">
+                        <img src="" alt="" id="modal-meal-img">
+                    </div>
+                    <div class="modal-content-right">
+                        <div class="modal-right-inner">
+                            <div class="modal-inner-content">
+                                <span id="modal-meal-name"></span>
+                                <div class="ingredients">
+                                    <span id="modal-meal-ingredients">Ingredients :-</span>
+                                    <div class="ingredients-content">
+                                        <ul id="ul-ingredients">
+                                            <li id="li-ingredient">
+                                                <img src="" alt="" id="ingredient-img">
+                                                <span id="ingredient-name"></span>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="instructions">
+                                    <span id="modal-meal-instructions">Instructions :- </span>
+                                    <div class="instructions-content">
+                                        <ul id="ul-instructions">
+                                            <li id="li-instructions">
+                                            </li>
+                                        </ul>
+                                        <div class="youtube">
+                                            <a href="" target="_blank" id="youtube-link">
+                                                <span id="youtube-watch">Click Here to Watch a <img
+                                                        src="./assets/youtube-icon.png" alt="" id="youtube-img"> Video
+                                                    for the recipe.</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="top-footer">
+                <div class="footer-logo">
+                    <span id="f-logo">Spice Vibe</span>
+                    <span id="f-byline">A symphony of Flavours</span>
+                </div>
+                <div class="f-sideOpt">
+                    <span id="red-Home"><a id="footer-home">Home</a></span>
+                    <span id="red-Explore"><a id="footer-explore">Explore</a></span>
+                    <span id="red-MealDay"><a id="footer-random">Random Meal</a></span>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <hr>
+                <span id="made-by">Made with ❤️ by Aayush</span>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/aayusharora-ok" target="_blank">
+                        <img src="./assets/linkedin-icon.png" alt="">
+                    </a>
+                    <a href="https://github.com/aayushwrld" target="_blank">
+                        <img src="./assets/github-icon.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aayushkyu/" target="_blank">
+                        <img src="./assets/instagram-icon.png" alt="">
+                    </a>
+                </div>
+                <span id="creds">Data from <a href="https://www.themealdb.com/" target="_blank"><u>The Meal DB
+                            API</u></a></span>
+            </div><br>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
