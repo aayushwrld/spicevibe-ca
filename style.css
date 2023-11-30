@@ -16,46 +16,30 @@ body {
 
 ::-webkit-scrollbar {
     width: 7.5px;
-    transition: all 2s ease;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: rgb(67, 64, 64);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg,
             rgb(143, 143, 143) 0%,
             rgb(0, 0, 0) 90%);
-    transition: all 2s ease;
     border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg,
-            rgb(0, 0, 0) 0%,
-            rgb(113, 113, 113) 100%);
-    transition: all 2s ease;
 }
 
 .modal-right-inner::-webkit-scrollbar {
     width: 8px;
-    transition: all 2s ease;
 }
 
-/* Track */
 .modal-right-inner::-webkit-scrollbar-track {
     background: #ffffff00;
 
 }
 
-/* Handle */
 .modal-right-inner::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.221);
-    transition: all 2s ease;
+    background: rgba(255, 255, 255, 0.405);
     border-radius: 10px;
 }
 
@@ -63,16 +47,13 @@ body {
     height: 8px;
 }
 
-/* Track */
 .meal-results-area::-webkit-scrollbar-track {
     background: rgba(40, 40, 40, 0.363);
     border-radius: 10px;
 }
 
-/* Handle */
 .meal-results-area::-webkit-scrollbar-thumb {
     background: rgb(130, 130, 130);
-    transition: all 2s ease;
     border-radius: 10px;
 }
 

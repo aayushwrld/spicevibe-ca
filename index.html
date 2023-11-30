@@ -1,20 +1,32 @@
+<!-- starting html code -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- linking style.css to document -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- giving a favicon for the document -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>Spice Vibe</title>
 </head>
 
+<!-- starting body code -->
+
 <body>
 
+    <!-- adding video as a background for the website -->
     <video autoplay muted loop id="home" poster="./assets/background-img.png">
         <source src="./assets/background-vid.mp4" type="video/mp4">
     </video>
+
+    <!-- a parent div for whole website -->
     <div class="parent">
+
+        <!-- syntax for navbar -->
         <nav>
             <div class="navbar">
                 <span id="nav-head"><a id="home-btn">Home</a></span>
@@ -22,9 +34,14 @@
                 <span id="nav-head"><a href="./about.html">About</a></span>
             </div>
         </nav>
+
+        <!-- a div blur, for the blur effect on background -->
         <div class="blur">
 
+            <!-- main div for the first part of the website -->
             <div class="main">
+
+                <!-- syntax for the main part of website -->
                 <div class="heading">
                     <span id="logo">Spice Vibe</span>
                     <span id="byline">A symphony of Flavours</span>
@@ -32,18 +49,28 @@
                 <div class="middle">
                     <span id="button-line">Ready to find a Meal?</span>
                 </div>
+
+                <!-- a div buttons, for navigation -->
                 <div class="buttons">
                     <button id="search-meal" onclick="location.href='#meal-search-info'">Spice In!</button>
                     <button id="meal-of-day" onclick="location.href='#meals'">Explore a Meal</button>
                 </div>
             </div>
+
+            <!-- a div meals for searching and generating random meals -->
             <div id="meals">
+
+                <!-- div for random meal generator -->
                 <div class="meal-gen-random">
+
+                    <!-- div for heading -->
                     <div class="meal-gen-header">
                         <span id="meal-gen-header-1">Make yourself this delicious meal!</span>
                         <span id="meal-gen-header-2">Here's a Recipe for you!</span>
                         <span id="meal-gen-header-info">Click on the meal to generate its recipe!</span>
                     </div>
+
+                    <!-- div for the randomly generated meal, code will be pushed from javascript to HTML for updating -->
                     <div class="meal-gen-food">
                         <div class="meal-gen-food-border">
                             <div class="meal-loading" id="meal-loading"><img src="./assets/loading.gif" alt=""></div>
@@ -54,27 +81,35 @@
                                 <span id="meal-gen-food-name"></span>
                             </div>
                         </div>
+
+                        <!-- div for a button for generating a new random meal -->
                         <div class="meal-gen-button"><button id="gen-meal"><img src="./assets/redo-icon.png" alt=""
                                     id="redo-icon">Generate New</button></div>
                     </div>
                 </div>
 
+                <!-- div for generating meal based on search -->
                 <div class="meal-gen-category">
+
+                    <!-- div for search area of the website -->
                     <div class="meal-search-area">
                         <span id="meal-search-info">Search for your desired category!</span>
+
+                        <!-- div, input and button for searching the category of meals -->
                         <div class="meal-search-button">
                             <input type="text" id="search-input" placeholder="Search for Category" />
-                            <button id="search-btn"><img src="./assets/search-icon.png" alt=""
-                                    id="search-icon"></button>
+                            <button id="search-btn">
+                                <img src="./assets/search-icon.png" alt="" id="search-icon">
+                            </button>
                         </div>
+
+                        <!-- information for the user to guide them -->
                         <span id="meal-search-info2">Search to get results!</span>
                     </div>
-                    <center><span id="meal-search-info3"></span>
-                        <center>
+                    <center><span id="meal-search-info3"></span><center>
 
-
+                            <!-- div for meal results, in here the meals will come up and will be pushed from JavaScript -->
                             <div class="meal-results-area">
-
                             </div>
                 </div>
             </div>
@@ -84,20 +119,35 @@
         </div>
 
 
+        <!-- div for modal which will appear when clicked on a meal -->
         <div id="modal">
             <div class="modal-inner">
+
+                <!-- close button for the modal, so user can go back -->
                 <div class="modal-close-btn">
                     <button id="modal-close"><img src="./assets/close-icon.png" alt="" id="close-icon">Close</button>
                 </div>
+
+                <!-- div for content inside the modal -->
                 <div class="modal-content">
+
+                    <!-- loading div, for loading effect such that it will load when clicked on the generate meal button -->
                     <div class="meal-loading for-search" id="meal-loading"><img src="./assets/loading.gif" alt=""></div>
+
+                    <!-- div for left part of the modal (image) -->
                     <div class="modal-content-left">
                         <img src="" alt="" id="modal-meal-img">
                     </div>
+
+                    <!-- div for right part of the modal (dish name, ingredients, steps, etc.) -->
                     <div class="modal-content-right">
                         <div class="modal-right-inner">
+
+                            <!-- div in which all content will be updated according to the meal, from JavaScript -->
                             <div class="modal-inner-content">
                                 <span id="modal-meal-name"></span>
+
+                                <!-- here ingredients will be updated -->
                                 <div class="ingredients">
                                     <span id="modal-meal-ingredients">Ingredients :-</span>
                                     <div class="ingredients-content">
@@ -106,10 +156,11 @@
                                                 <img src="" alt="" id="ingredient-img">
                                                 <span id="ingredient-name"></span>
                                             </li>
-
                                         </ul>
                                     </div>
                                 </div>
+
+                                <!-- here instructions will be updated -->
                                 <div class="instructions">
                                     <span id="modal-meal-instructions">Instructions :- </span>
                                     <div class="instructions-content">
@@ -117,6 +168,8 @@
                                             <li id="li-instructions">
                                             </li>
                                         </ul>
+
+                                        <!-- here a youtube video will be linked to the recipe -->
                                         <div class="youtube">
                                             <a href="" target="_blank" id="youtube-link">
                                                 <span id="youtube-watch">Click Here to Watch a <img
@@ -133,22 +186,30 @@
             </div>
         </div>
 
-
+        <!-- footer of the webpage -->
         <footer>
+
+            <!-- div for top part of the footer -->
             <div class="top-footer">
                 <div class="footer-logo">
                     <span id="f-logo">Spice Vibe</span>
                     <span id="f-byline">A symphony of Flavours</span>
                 </div>
+
+                <!-- div for side options to navigate across the site -->
                 <div class="f-sideOpt">
                     <span id="red-Home"><a id="footer-home">Home</a></span>
                     <span id="red-Explore"><a id="footer-explore">Explore</a></span>
                     <span id="red-MealDay"><a id="footer-random">Random Meal</a></span>
                 </div>
             </div>
+
+            <!-- div for bottom part of the footer -->
             <div class="bottom-footer">
                 <hr>
                 <span id="made-by">Made with ❤️ by Aayush</span>
+
+                <!-- div for icons of my socials -->
                 <div class="footer-icons">
                     <a href="https://www.linkedin.com/in/aayusharora-ok" target="_blank">
                         <img src="./assets/linkedin-icon.png" alt="">
@@ -160,9 +221,11 @@
                         <img src="./assets/instagram-icon.png" alt="">
                     </a>
                 </div>
-                <span id="creds">Data from <a href="https://www.themealdb.com/" target="_blank"><u>The Meal DB
-                            API</u></a></span>
-            </div><br>
+
+                <!-- credits for content from Meal DB -->
+                <span id="creds">Data from <a href="https://www.themealdb.com/" target="_blank"><u>The Meal DB API</u></a></span>
+            </div>
+            <br>
         </footer>
     </div>
     <script src="script.js"></script>
