@@ -1,3 +1,4 @@
+
 // defining all necessary variables
 const genMealBtn = document.getElementById('gen-meal');
 const redoIcon = document.getElementById('redo-icon');
@@ -286,14 +287,11 @@ function searchResult(category) {
                     let idUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${elementID}`
 
                     // fetching the API of link
-                    fetch(idUrl)
-                        .then((result) => {
-                            return result.json()
-                        })
+                    axios.get(idUrl)
                         .then((data2) => {
 
                             // running addInModal function and changing content accordingly
-                            addInModal(data2)
+                            addInModal(data2.data)
                         }).catch((err) => {
                             console.log(err)
                         })
